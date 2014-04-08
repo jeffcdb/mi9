@@ -1,0 +1,27 @@
+{
+  "name": "mi9test",
+  "version": "0.0.0",
+  "description": "mi9 test",
+  "main": "mi9.js",
+  "dependencies": {
+    "restify": "^2.7.0",
+    "logfmt": "^1.1.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jeffcdb/mi9.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeffcdb/mi9/issues"
+  },
+  "homepage": "https://github.com/jeffcdb/mi9",
+  "engines": {
+    "node": "0.10.26"
+  }
+}
