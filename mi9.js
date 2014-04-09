@@ -37,7 +37,7 @@ function Mi9test(req,res,next)
 		return next();
 	}catch(e)
 	{
-	    var err = {"error": "Could not decode request: JSON parsing failed"};
+	    var err = {"error": "Could not decode request"};
 		console.log(err);
 		res.statusCode = 400;
 		res.end(JSON.stringify(err));
