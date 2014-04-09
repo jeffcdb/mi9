@@ -40,7 +40,7 @@ function Mi9test(req,res,next)
 	    var err = {"error": "Could not decode request"};
 		console.log(err);
 		res.statusCode = 400;
-		res.end(JSON.stringify(err));
+		res.send(JSON.stringify(err));
 	}
 }
 
