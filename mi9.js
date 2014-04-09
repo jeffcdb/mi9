@@ -19,6 +19,7 @@ function Mi9test(req,res,next)
 
 	try{
 		var items = req.params.payload;
+		console.log(items);
 		var results = new Array();
 		var result = {};
 		items.filter(function(item){
