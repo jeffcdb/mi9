@@ -5,20 +5,19 @@ var port =  process.env.PORT || 5000;
 var domain = require('domain');
 var server = restify.createServer({name : "mi9test"});
 
+server.use(restify.acceptParser(server.acceptable));
+server.use(restify.queryParser());
+server.use(restify.jsonp());
+server.use(restify.bodyParser());
+server.use(restify.CORS());
 
 function Mi9test(req,res,next)
 {
+	res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
+	res.setHeader('content-type', 'application/json');
+	
 	try{
-		server.use(restify.acceptParser(server.acceptable));
-		server.use(restify.queryParser());
-		server.use(restify.jsonp());
-		server.use(restify.bodyParser());
-		server.use(restify.CORS());
-
-		res.header("Access-Control-Allow-Origin", "*");
-		res.header("Access-Control-Allow-Headers", "X-Requested-With");
-		res.setHeader('content-type', 'application/json');
-
 		var items = req.params.payload;
 		var results = new Array();
 		var result = {};
