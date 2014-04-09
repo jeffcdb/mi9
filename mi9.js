@@ -34,7 +34,7 @@ function Mi9test(req,res,next)
 		}
 	});	
 	var jsondata = {"response":results};
-	console.log(JSON.stringify(jsondata));
+	//console.log(JSON.stringify(jsondata));
 	res.end(JSON.stringify(jsondata));
 	return next();
 	}
