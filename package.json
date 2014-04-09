@@ -1,8 +1,8 @@
 {
-  "name": "mi9test",
+  "name": "rest",
   "version": "0.0.0",
   "description": "mi9 test",
-  "main": "mi9.js",
+  "main": "rest.js",
   "dependencies": {
     "restify": "^2.7.0",
     "logfmt": "^1.1.2"
