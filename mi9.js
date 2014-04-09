@@ -14,6 +14,9 @@ server.use(restify.CORS());
 function Mi9test(req,res,next)
 {
 	try{
+		console.log(req.params);
+		console.log("finished request");
+	
 		res.header("Access-Control-Allow-Origin", "*");
 		res.header("Access-Control-Allow-Headers", "X-Requested-With");
 		res.setHeader('content-type', 'application/json');
