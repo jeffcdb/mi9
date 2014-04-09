@@ -19,30 +19,36 @@ function Mi9test(req,res,next)
 
 	try{
 		JSON.parse(req.params);
-		var items = req.params.payload;
-		console.log(req.params);
-		var results = new Array();
-		var result = {};
-		items.filter(function(item){
-			if (item.drm && (item.episodeCount > 0)) {
-				var result = {
-					"image": item.image.showImage,
-					"slug": item.slug,
-					"title":item.title
-				};
-				results.push(result);
-			}
-		});	
-		var jsondata = {"response":results};
-		console.log(JSON.stringify(jsondata));
-		res.end(JSON.stringify(jsondata));
-		return next();
-	}catch(e)
+	}
+	catch(e)
 	{
 	    var err = {"error": "Could not decode request: JSON parsing failed"};
 		console.log(JSON.stringify(err));
 		res.statusCode = 400;
 		res.send(err);
+	}
+
+	try{
+	var items = req.params.payload;
+	console.log(req.params);
+	var results = new Array();
+	var result = {};
+	items.filter(function(item){
+		if (item.drm && (item.episodeCount > 0)) {
+			var result = {
+				"image": item.image.showImage,
+				"slug": item.slug,
+				"title":item.title
+			};
+			results.push(result);
+		}
+	});	
+	var jsondata = {"response":results};
+	console.log(JSON.stringify(jsondata));
+	res.end(JSON.stringify(jsondata));
+	return next();
+	}catch(e)
+	{
 	}
 }
 
