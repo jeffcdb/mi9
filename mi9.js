@@ -15,7 +15,8 @@ function Mi9test(req,res,next)
 {
 	res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "X-Requested-With");
-
+	res.setHeader('content-type', 'application/json');
+	
 	try{
 		var items = req.params.payload;
 		var results = new Array();
@@ -44,7 +45,7 @@ function Mi9test(req,res,next)
 }
 
 server.post('/' ,Mi9test);
-server.listen(port,function(){
+server.listen(port ,function(){
 	console.log("Listening on " + port);
     //console.log('%s listening at %s ', server.name , server.url);
 });
