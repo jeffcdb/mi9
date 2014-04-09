@@ -40,13 +40,13 @@ function Mi9test(req,res,next)
 			}
 		});	
 		var jsondata = {"response":results};
-		console.log(jsondata);
+		console.log(JSON.stringify(jsondata));
 		res.end(JSON.stringify(jsondata));
 		return next();
 	}catch(e)
 	{
-	    var err = {"error": "Could not decode request"};
-		console.log(err);
+	    var err = {"error": "Could not decode request: JSON parsing failed"};
+		console.log(JSON.stringify(err));
 		res.statusCode = 400;
 		res.send(JSON.stringify(err));
 	}
