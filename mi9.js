@@ -18,8 +18,9 @@ function Mi9test(req,res,next)
 	res.setHeader('content-type', 'application/json');
 
 	try{
+		JSON.parse(req.params);
 		var items = req.params.payload;
-		console.log(items);
+		console.log(req.params);
 		var results = new Array();
 		var result = {};
 		items.filter(function(item){
