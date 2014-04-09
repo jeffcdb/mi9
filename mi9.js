@@ -38,12 +38,13 @@ function Mi9test(req,res,next)
 	{
 	    var err = {"error": "Could not decode request: JSON parsing failed"};
 		console.log(err);
+		res.statusCode = 400;
 		res.end(JSON.stringify(err));
 	}
 }
 
 server.post('/' ,Mi9test);
-server.listen(port ,function(){
+server.listen(port ,ip_addr,function(){
 	console.log("Listening on " + port);
     //console.log('%s listening at %s ', server.name , server.url);
 });
