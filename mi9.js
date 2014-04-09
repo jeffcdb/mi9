@@ -42,7 +42,7 @@ function Mi9test(req,res,next)
 	}
 }
 
-server.post('/' ,postPayLoad);
+server.post('/' ,Mi9test);
 
 server.listen(port ,function(){
     console.log('%s listening at %s ', server.name , server.url);
