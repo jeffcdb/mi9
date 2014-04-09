@@ -40,7 +40,7 @@ function Mi9test(req,res,next)
 	    var err = {"error": "Could not decode request: JSON parsing failed"};
 		console.log(JSON.stringify(err));
 		res.statusCode = 400;
-		res.send(JSON.stringify(err));
+		res.send(err);
 	}
 }
 
