@@ -21,8 +21,8 @@ function Mi9test(req,res,next)
 	
 
 		var items = req.params.payload;
-		console.log(items);
-		console.log("finished request");
+		//console.log(items);
+		//console.log("finished request");
 
 		var results = new Array();
 		var result = {};
