@@ -1,28 +1,11 @@
 {
-  "name": "rest",
-  "version": "0.0.0",
-  "description": "mi9 test",
-  "main": "rest.js",
+  "name": "restify-example",
+  "version": "0.0.1",
   "dependencies": {
-    "restify": "^2.7.0",
-    "logfmt": "^1.1.2"
+    "restify": "^2.4.1"
   },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jeffcdb/mi9.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jeffcdb/mi9/issues"
-  },
-  "homepage": "https://github.com/jeffcdb/mi9",
   "engines": {
-    "node": "0.10.26",
-	"npm":"1.2.x"
+    "node": "0.10.x",
+    "npm": "1.2.x"
   }
 }
