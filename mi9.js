@@ -29,8 +29,7 @@ function Mi9test(req,res,next)
 				};
 				results.push(result);
 			}
-		});
-		
+		});	
 		var jsondata = {"response":results};
 		console.log(jsondata);
 		res.end(JSON.stringify(jsondata));
