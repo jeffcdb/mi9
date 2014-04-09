@@ -13,17 +13,12 @@ server.use(restify.CORS());
 
 function Mi9test(req,res,next)
 {
-		res.header("Access-Control-Allow-Origin", "*");
-		res.header("Access-Control-Allow-Headers", "X-Requested-With");
-		res.setHeader('content-type', 'application/json');
+	res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
+	res.setHeader('content-type', 'application/json');
 
-		try{
-	
-
+	try{
 		var items = req.params.payload;
-		//console.log(items);
-		//console.log("finished request");
-
 		var results = new Array();
 		var result = {};
 		items.filter(function(item){
@@ -42,10 +37,10 @@ function Mi9test(req,res,next)
 		return next();
 	}catch(e)
 	{
-	    var err = {"error":"Could not decode request: JSON parsing failed"};
+	    var err = {"error": "Could not decode request: JSON parsing failed"};
 		console.log(JSON.stringify(err));
 		res.statusCode = 400;
-		res.end(err);	
+		res.send(err);
 	}
 }
 
