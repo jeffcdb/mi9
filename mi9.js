@@ -19,10 +19,11 @@ function Mi9test(req,res,next)
 
 		try{
 	
-		console.log(req.params);
+
+		var items = req.params.payload;
+		console.log(items);
 		console.log("finished request");
 
-	var items = req.params.payload;
 		var results = new Array();
 		var result = {};
 		items.filter(function(item){
