@@ -16,6 +16,14 @@ function Mi9test(req,res,next)
 	res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "X-Requested-With");
 	res.setHeader('content-type', 'application/json');
+
+	req.on('error',function(e)
+	{
+		var err = {"error": "Could not decode request"};
+		console.log(err);
+		res.statusCode = 400;
+		res.send(JSON.stringify(err));
+	});
 	
 	try{
 		var items = req.params.payload;
