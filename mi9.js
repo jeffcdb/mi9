@@ -1,5 +1,5 @@
 var restify = require('restify');
-var logfmt = require('logfmt');
+//var logfmt = require('logfmt');
 var port =  process.env.PORT || 5000;
 var server = restify.createServer({name : "mi9test"});
 
@@ -47,6 +47,3 @@ server.listen(port ,function(){
 	console.log("Listening on " + port);
     //console.log('%s listening at %s ', server.name , server.url);
 });
-
-
-
