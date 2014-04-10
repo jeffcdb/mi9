@@ -17,6 +17,7 @@ formatters:
 		return (JSON.stringify(err));
 		}
 
+		console.log("err");
       if (Buffer.isBuffer(body))
         return body.toString('base64');
 
